@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+// css reset end
+
+.wrap{
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+$spacer-1: 5px;
+$spacer-2: 8px;
+
+$font-menu: 16px;
+$font-small: 20px;
+$font-normal: 24px;
+
+$color-primary: #3F5D45;
+$color-secondary: #EAF0ED;
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacer-1*6 0;
+  h1{
+    a{
+      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg');
+      width: 200px;
+      height: 40px;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+    }
+  }
+}
+
+.menuList{
+  display: flex;
+  align-items: center;
+}
+
+.menu{
+  display: flex;
+  margin-right: $spacer-1*10;
+  a{
+    display: block;
+    padding: $spacer-1*2 $spacer-1*6 $spacer-2 $spacer-1*6;
+    color: $color-primary;
+    font-size: $font-menu;
+    font-weight: 600;
+    &:hover{
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+}
+
+.banner{
+  margin-bottom: $spacer-1*12;
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside{
+  width: 300px;
+  text-align: center;
+  font-size: $font-normal;
+  h2{
+    color: #fff;
+    background-color: $color-primary;
+    font-weight: 600;
+    padding-top: $spacer-2*2;
+    padding-bottom: $spacer-2*2;
+  }
+}
+
+.content{
+  width: 620px;
+}
+
+.productList{
+  a{
+    color: $color-primary;
+    font-weight: 600;
+    display: block;
+    padding-top: $spacer-1*3;
+    padding-bottom: $spacer-1*3;
+    &:hover{
+      background: $color-secondary;
+    }
+  }
+  .active{
+    background-color: $color-secondary;
+  }
+}
+
+/* product */
+.products{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: $spacer-1*4;
+}
+
+.product-item{
+  width: 300px;
+  margin-bottom: $spacer-1*2;
+  position: relative;
+}
+
+.special{
+  width: 16px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: $color-primary;
+  color: #fff;
+  line-height: 1.5;
+  padding: $spacer-1*2;
+}
+
+.addToList{
+  width: 20px;
+  position: absolute;
+  top: 19px;
+  right: 22px;
+}
+
+.product-content{
+  color: $color-primary;
+  display: flex;
+  font-size: $font-small;
+  h3{
+    width: 173px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+    border-left: 1px solid $color-secondary;
+    border-right: 1px solid $color-secondary;
+  }
+  p{
+    width: 127px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+    border-right: 1px solid $color-secondary;
+  }
+}
+
+.addToCart{
+  display: block;
+  text-align: center;
+  font-size: $font-normal;
+  color: $color-primary;
+  background-color: $color-secondary;
+  padding-top: $spacer-2*2;
+  padding-bottom: $spacer-2*2;
+  font-weight: 600;
+  &:hover{
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+
+/* pagination */
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  img{
+    width: 24px;
+    height: 24px;
+    padding: 15.5px 17.5px;
+  }
+  a{
+    border: 1px solid $color-secondary;
+    border-right: 0;
+    color: $color-primary;
+    display: block;
+    &:hover{
+      background-color: $color-primary;
+      color: #fff;
+    }
+    &:last-child{
+      border-right: 1px solid $color-secondary;
+    }
+  }
+  .page{
+    padding: 19px 24.5px;
+    text-align: center;
+    font-size: $font-small;
+  }
+  .active{
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
