@@ -321,6 +321,7 @@ nav{
     display: block;
     &:hover{
       background-color: $color-secondary;
+      color: $color-primary;
     }
     &:last-child{
       border-right: 1px solid $color-secondary;
