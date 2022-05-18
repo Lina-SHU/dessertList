@@ -251,14 +251,14 @@ nav{
 }
 
 .special{
-  width: 16px;
   position: absolute;
   top: 0;
   left: 20px;
   background-color: $color-primary;
   color: #fff;
-  line-height: 1.5;
+  writing-mode: vertical-lr;
   padding: $spacer-1*2;
+  letter-spacing: 4px;
 }
 
 .addToList{
@@ -320,8 +320,7 @@ nav{
     color: $color-primary;
     display: block;
     &:hover{
-      background-color: $color-primary;
-      color: #fff;
+      background-color: $color-secondary;
     }
     &:last-child{
       border-right: 1px solid $color-secondary;
